@@ -1,0 +1,18 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from conans import python_requires
+
+
+base = python_requires("boost_base/1.68.0@bincrafters/testing")
+
+class BoostConvertConan(base.BoostBaseConan):
+    name = "boost_yap"
+    url = "https://github.com/bincrafters/conan-boost_yap"
+    lib_short_names = ["yap"]
+    header_only_libs = ["yap"]
+    b2_requires = [
+        "boost_hana",
+        "boost_preprocessor",
+        "boost_type_index"
+    ]
