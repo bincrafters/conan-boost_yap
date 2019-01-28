@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.68.0@bincrafters/stable")
 
 class BoostConvertConan(base.BoostBaseConan):
     name = "boost_yap"
+    version = "1.68.0"
     url = "https://github.com/bincrafters/conan-boost_yap"
     lib_short_names = ["yap"]
     header_only_libs = ["yap"]
